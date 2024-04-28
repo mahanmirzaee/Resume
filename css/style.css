@@ -441,6 +441,8 @@ color: #F57F17;
     padding: 7rem 3rem;
     height: 100%;
     overflow: hidden;
+    position: relative;
+    z-index: 5;
 };
 
 
@@ -485,4 +487,14 @@ color: #F57F17;
 
     background-color: #49AF46;
 
+}
+
+.service__wave{
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;    
+    
 }
