@@ -1,0 +1,202 @@
+@media (min-width: 1400px) {
+    .container {
+        width: 1250px;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .home__picture{
+
+        width: 45rem;
+        height: 45rem;
+    }
+    .home{
+        height: 76rem;
+    }
+   
+}
+
+
+
+@media screen and (max-width:1200px) {
+    
+    .home__picture{
+
+        width: 38rem;
+        height: 38rem;
+    }
+    .home__title{
+
+        font-size: 4.5rem;
+       
+    }
+    .home{
+        height: 68rem;
+    }
+   
+}
+
+@media screen and (max-width:992px) {
+    
+    .nav__logo{
+        font-size: 4rem;
+    }
+
+    .menu__item{
+        padding-left: 2rem;
+    }
+    .home{
+        margin-top: 6rem;
+    }
+  .home .row{
+    flex-direction: column-reverse;
+  }
+  .home__content{
+
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.home__links-wrapper{
+
+    justify-content: center;
+    align-items: center;
+}
+.home__picture{
+    margin: 0 auto;
+    width: 36rem;
+    height: 36rem;
+}
+.home{
+    margin-top: 6rem;
+    background-image: none;
+    height: auto;
+}
+
+.about{
+    flex-direction: column;
+}
+}
+
+
+@media screen and (max-width:768px) {
+    
+
+    .menu{
+        /* display: none; */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:var(--section-bg-color);
+        transition: all 200ms ease-out;
+
+        /* در اینجا ارتفاع را صفر کردم
+        چون منو ار بین بره و باید اورفلو هیدن هم بدیم
+        تا هرچیزی از صفحه زد بیرون را نشان نده */
+        height: 0; 
+        overflow: hidden;
+    }
+
+    .menu--open{
+
+        height: 33rem;
+
+    }
+
+
+    .menu__item{
+        padding:0;
+        margin-bottom: 2rem ;
+        
+    }
+
+    .menu__item:first-child{
+        margin-top: 2rem;
+    }
+
+
+    .nav__toggle-icon{
+        display: flex;
+    }
+
+    .cover{
+        position: fixed;
+        top:0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,10%);
+        z-index: -1;
+        opacity: 0;
+        transition: all 200ms ease-out;
+    }
+
+    .cover--show{
+        opacity: 1;
+        z-index: 99;
+    }           
+    .home__picture{
+        
+        width: 34rem;
+        height: 34rem;
+    }
+
+    .about__content{
+
+        padding: 2rem 4rem;
+    }
+
+    .service{
+
+        padding: 4rem 1rem;
+    }
+
+    .service__icon{
+        width: 6rem;
+    }
+}
+
+@media screen and (max-width:576px) {
+    
+    .home__title{
+        font-size: 4rem;
+    }
+
+    .home__name{
+        font-size: 2rem;
+    }
+    .home__picture{
+        
+        width: 32rem;
+        height: 32rem;
+        border-width: 1.5rem;
+    }
+    .about__link{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:410px) {
+    
+    .home__title{
+        font-size: 3.3rem;
+    }
+
+    .home__picture{
+        width: 32rem;
+        height: 32rem;
+        border-width: 1.2rem;
+    }
+    .home__links-wrapper{
+    }
+
+}
+
+
