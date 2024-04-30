@@ -104,6 +104,13 @@ ul{
 
 }
 
+.skew-reset{
+    transform: skewY(6deg);
+}
+.h-full{
+    height: 100%;
+}
+
 
 
 /* 
@@ -497,4 +504,50 @@ color: #F57F17;
     width: 100%;
     z-index: -1;    
     
+}
+
+
+/*
+
+ - Resume Section -
+
+*/
+
+.resume{
+    margin-top: 20rem;
+    box-shadow: 0 0 6rem rgb(19 182 255 / 24%);
+    margin-bottom: 10rem;
+    padding: 10rem 0;
+    transform: skewY(-6deg);
+    background-color: var(--section-bg-color);
+}
+.resume-list{
+    background-color: var(--app-bg-color);
+    box-shadow: 0 0 4rem rgb(96 233 255 / 27%);
+    position: relative;
+    z-index: 5;
+}
+.resume-list::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    width: 4rem;
+    z-index: -1;
+}
+.resume-list__item{
+
+}
+.resume-list__item--active{
+
+}
+.resume-list__icon{
+    width: 2rem;
+    height: 2rem;
+    margin: 0 1rem;
+}
+.resume-list__text{
+
 }
