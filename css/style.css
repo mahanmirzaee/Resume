@@ -565,7 +565,7 @@ color: #F57F17;
     transition: all 0.2s ease-in;
 }
 .resume-list__item--active{
-    color: #fff;    
+    /* color: #fff; */
 }
 .resume-list__item--active::before{
     max-width: 26rem;
