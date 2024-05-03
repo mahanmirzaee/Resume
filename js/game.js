@@ -1,45 +1,21 @@
-const navToggleIcon = document.querySelector(".nav__toggle-icon");
-const menu = document.querySelector(".menu");
-const cover = document.querySelector(".cover");
-const showresume = document.querySelectorAll(".resume-list__item");
+const navToggleIcon = document.querySelector('.nav__toggle-icon')
+const menu = document.querySelector('.menu')
+const cover = document.querySelector('.cover')
+const resumeListItems = document.querySelectorAll('.resume-list__item')
+const resumeContent=document.querySelectorAll("resume-content")
 
 
-
-navToggleIcon.addEventListener("click", clickHandler);
-
-const showHandler = (event) => {
-  showresume.forEach((item) => {
-    item.classList.remove("resume-list__item--active");
-    event.target.classList.add("resume-list__item--active");
-  });
-};
+navToggleIcon.addEventListener('click',function (){
+    this.classList.toggle('nav__toggle-icon--open')
+    menu.classList.toggle('menu--open')
+    cover.classList.toggle('cover--show')
+})
 
 
-    // const showHandler=(event)=>{
-    //     items.forEach(i=>{
-    //         i.classList.remove("resume-list__item--active")
-    //         event.target.classList.add("resume-list__item--active")
-    //     })
-    // }
-
-
-
-    // items.forEach((item) => {
-
-    //     item.addEventListener("click",showHandler)
-        
-
-    // });
-
-
-
-
-items.forEach((item) => {
-
-    item.addEventListener("click",function(){
-        document.querySelector(".resume-list__item--active").classList.remove("resume-list__item--active")
-        item.classList.add("resume-list__item--active")
+resumeListItems.forEach(resumeListItem => {
+    resumeListItem.addEventListener('click',function (event){
+        document.querySelector('.resume-list__item--active').classList.remove('resume-list__item--active')
+        this.classList.add('resume-list__item--active')
+       console.log(event.target.dataset.education) 
     })
-    
-
-});
+})
