@@ -2,7 +2,6 @@ const navToggleIcon = document.querySelector('.nav__toggle-icon')
 const menu = document.querySelector('.menu')
 const cover = document.querySelector('.cover')
 const resumeListItems = document.querySelectorAll('.resume-list__item')
-const resumeContent=document.querySelectorAll("resume-content")
 
 
 navToggleIcon.addEventListener('click',function (){
@@ -13,9 +12,24 @@ navToggleIcon.addEventListener('click',function (){
 
 
 resumeListItems.forEach(resumeListItem => {
-    resumeListItem.addEventListener('click',function (event){
+    resumeListItem.addEventListener('click',function (){
         document.querySelector('.resume-list__item--active').classList.remove('resume-list__item--active')
+        document.querySelector('.resume-content--show').classList.remove('resume-content--show')
         this.classList.add('resume-list__item--active')
-       console.log(event.target.dataset.education) 
+        let contentId = this.getAttribute('data-content-id')
+        document.querySelector(contentId).classList.add('resume-content--show')
+
     })
 })
+
+
+const drowpBtn=document.querySelector(".drowdown__btn")
+const list=document.querySelector(".dropdown__list")
+
+const drowpHandler=()=>{
+
+    list.classList.toggle("showdrowp")
+
+}
+
+drowpBtn.addEventListener("click",drowpHandler)

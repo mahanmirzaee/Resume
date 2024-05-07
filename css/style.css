@@ -522,6 +522,9 @@ color: #F57F17;
     transform: skewY(-6deg);
     background-color: var(--section-bg-color);
 }
+.drowdown__btn{
+    display: none;
+}
 .resume-list{
     background-color: var(--app-bg-color);
     box-shadow: 0 0 4rem rgb(96 233 255 / 27%);
@@ -530,6 +533,8 @@ color: #F57F17;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 40rem;
+    margin-right: 3rem;
 }
 .resume-list::before{
     content: "";
@@ -587,11 +592,15 @@ color: #F57F17;
 .resume-content{
     border-left: .2rem solid var(--primary-color);
     padding-left: 3rem;
-    padding-top: 1rem;
-    display: none;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.2s ease-in;
 }
 .resume-content--show{
-    display: block;
+height: auto;
+overflow: visible;
+opacity: 1;
 }
 .resume-content__item{
     margin-bottom: 2rem;
